@@ -20,6 +20,14 @@
    • Fahrer                → Namen, Kurzinfos, Fotos        (siehe: riders)
    • Impressum             → Name, Anschrift, E-Mail …      (siehe: imprint)
    • Entwurfstexte        → markiert mit  // TODO: Text prüfen
+
+   ⚠️ CHECKLISTE VOR DEM ÖFFENTLICHMACHEN (Link teilen, auf Instagram posten …):
+   [ ] IMPRESSUM ausfüllen und  visible.imprint: true  setzen.
+       Pflicht für jede Website in Österreich (§ 25 MedienG, § 5 ECG) –
+       ohne Impressum drohen Verwaltungsstrafen.
+   [ ] Alle Entwurfstexte (// TODO: Text prüfen) gelesen und angepasst.
+   [ ] Alle auf den Fotos sind einverstanden, auf der Website zu erscheinen.
+   [ ] Martino ist einverstanden, dass wir das Bike-Bild verwenden.
    ===================================================================== */
 
 export type Rider = {
@@ -48,7 +56,7 @@ export const links = {
 export const visible = {
   riders: false, // Fahrer: einblenden, sobald Namen, Kurzinfos und Fotos da sind
   shop: false, // Shop: einblenden, sobald Preis und Foto der Trinkflasche da sind
-  imprint: false, // Impressum im Footer: einblenden, sobald Name, Anschrift und E-Mail da sind
+  imprint: false, // Impressum im Footer – ⚠️ MUSS vor dem Öffentlichmachen auf true (siehe Checkliste oben)
 };
 
 /* ---------- Menü im Header ----------
