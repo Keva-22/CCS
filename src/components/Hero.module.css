@@ -38,7 +38,8 @@ div.bg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 64px;
+  /* unten mehr Abstand als oben → Text sitzt optisch etwas höher */
+  padding-block: 32px calc(64px + 12vh);
   text-align: center;
 }
 

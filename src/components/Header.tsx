@@ -27,7 +27,6 @@ export default function Header() {
       <div className={`container ${styles.inner}`}>
         <a href="#start" className={styles.brand} onClick={closeMenu} aria-label={`${team.name} – zum Seitenanfang`}>
           <PlaceholderImage src={logo.src} alt={logo.alt} className={styles.logo} />
-          <span className={styles.brandShort}>{team.shortName}</span>
           <span className={styles.brandLong}>{team.name.replace(`${team.shortName} – `, '')}</span>
         </a>
 
