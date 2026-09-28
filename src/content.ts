@@ -15,7 +15,6 @@
      Wenn du ein echtes Foto einsetzt, beschreibe dort, was darauf zu sehen ist.
 
    OFFENE PLATZHALTER (alles in [eckigen Klammern] muss noch ersetzt werden):
-   • [MARTINO_URL]         → Website von Martino Cycling    (siehe: links)
    • [PREIS]               → Preis der Trinkflasche         (siehe: shop)
    • [TRIKOT-DETAILS]      → Infos zur Teamkleidung         (siehe: gear)
    • Fahrer                → Namen, Kurzinfos, Fotos        (siehe: riders)
@@ -39,8 +38,7 @@ export const team = {
 /* ---------- Links ---------- */
 export const links = {
   instagram: 'https://www.instagram.com/ccs_salzburg/',
-  // Solange hier ein Platzhalter steht, ist der Martino-Button nicht klickbar.
-  martino: '[MARTINO_URL]',
+  martino: 'https://www.martino-cycling.at/',
 };
 
 /* ---------- Sektionen ein-/ausblenden ----------
