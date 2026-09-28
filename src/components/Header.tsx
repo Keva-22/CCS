@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { navigation, team, visible } from '../content';
+import { logo, navigation, team, visible } from '../content';
+import PlaceholderImage from './PlaceholderImage';
 import styles from './Header.module.css';
 
 // Menüpunkte ausgeblendeter Sektionen weglassen
@@ -25,6 +26,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <a href="#start" className={styles.brand} onClick={closeMenu} aria-label={`${team.name} – zum Seitenanfang`}>
+          <PlaceholderImage src={logo.src} alt={logo.alt} className={styles.logo} />
           <span className={styles.brandShort}>{team.shortName}</span>
           <span className={styles.brandLong}>{team.name.replace(`${team.shortName} – `, '')}</span>
         </a>

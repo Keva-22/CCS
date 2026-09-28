@@ -71,12 +71,14 @@ export const navigation = [
   { label: 'Galerie', id: 'galerie' },
 ];
 
+/* ---------- Logo (links oben im Header) ---------- */
+export const logo = {
+  src: 'images/logo.jpg',
+  alt: 'Logo von CCS – Cycling Collective Salzburg',
+};
+
 /* ---------- 1. Hero ---------- */
 export const hero = {
-  logo: {
-    src: 'images/logo.jpg',
-    alt: 'Logo von CCS – Cycling Collective Salzburg',
-  },
   background: {
     src: 'images/hero.jpg',
     alt: 'Vier Fahrer von CCS im Teamtrikot, von hinten fotografiert, auf einer Landstraße',

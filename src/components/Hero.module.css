@@ -42,19 +42,6 @@ div.bg {
   text-align: center;
 }
 
-/* Teamlogo */
-.logo {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 28px;
-  object-fit: contain;
-}
-
-div.logo {
-  border-radius: var(--radius);
-  font-size: 0.75rem;
-}
-
 .title {
   max-width: 14ch;
   font-size: clamp(2.75rem, 9vw, 6rem);
@@ -73,13 +60,3 @@ div.logo {
   color: var(--color-accent-light);
 }
 
-@media (min-width: 768px) {
-  .logo {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-img.logo {
-  border-radius: var(--radius);
-}
