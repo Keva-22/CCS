@@ -1,4 +1,4 @@
-import { footer, links, team } from '../content';
+import { footer, imprint, links, team } from '../content';
 import styles from './Footer.module.css';
 
 // Solange die URL noch ein Platzhalter ist, bekommt der Link kein Ziel.
@@ -22,6 +22,21 @@ export default function Footer() {
             </a>
           </li>
         </ul>
+
+        <section id="impressum" className={styles.imprint} aria-labelledby="impressum-title">
+          <h2 id="impressum-title" className={styles.imprintTitle}>
+            {imprint.title}
+          </h2>
+          <p className={styles.imprintBasis}>{imprint.legalBasis}</p>
+          <dl className={styles.imprintList}>
+            {imprint.entries.map((entry) => (
+              <div key={entry.label}>
+                <dt>{entry.label}</dt>
+                <dd>{entry.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
         <p className={styles.copyright}>{footer.copyright}</p>
       </div>

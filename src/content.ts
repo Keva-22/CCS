@@ -20,7 +20,8 @@
    • [BIKE-MARKE / MODELL] → Infos zu den Teambikes         (siehe: gear)
    • [TRIKOT-DETAILS]      → Infos zur Teamkleidung         (siehe: gear)
    • Fahrer                → Namen, Kurzinfos, Fotos        (siehe: riders)
-   • Entwurfstexte         → markiert mit  // TODO: Text prüfen
+   • Impressum             → Name, Anschrift, E-Mail …      (siehe: imprint)
+   • Entwurfstexte        → markiert mit  // TODO: Text prüfen
    ===================================================================== */
 
 export type Rider = {
@@ -179,6 +180,24 @@ export const gallery = {
     { src: 'images/gallery-4.jpg', alt: 'Galerie-Foto 4' },
     { src: 'images/gallery-5.jpg', alt: 'Galerie-Foto 5' },
     { src: 'images/gallery-6.jpg', alt: 'Galerie-Foto 6' },
+  ],
+};
+
+/* ---------- Impressum (steht im Footer) ----------
+   Pflichtangaben für Websites in Österreich. Welche Zeilen nötig sind, hängt davon ab,
+   ob CCS ein eingetragener Verein ist: Wenn nicht, die Zeilen „ZVR-Zahl“ und
+   „Vertretungsbefugt“ einfach komplett löschen (die ganze Zeile { … },). */
+export const imprint = {
+  title: 'Impressum',
+  legalBasis: 'Informationen und Offenlegung gemäß § 5 ECG und § 25 MedienG',
+  entries: [
+    { label: 'Medieninhaber & Herausgeber', value: '[NAME ODER VEREINSNAME]' },
+    { label: 'Anschrift', value: '[STRASSE HAUSNUMMER], [PLZ] [ORT], Österreich' },
+    { label: 'E-Mail', value: '[E-MAIL-ADRESSE]' },
+    { label: 'ZVR-Zahl', value: '[ZVR-ZAHL]' },
+    { label: 'Vertretungsbefugt', value: '[NAME, FUNKTION]' },
+    // TODO: Text prüfen
+    { label: 'Inhalt der Website', value: 'Informationen über das Hobby-Radsportteam CCS – Cycling Collective Salzburg.' },
   ],
 };
 

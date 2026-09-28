@@ -53,13 +53,51 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* ---------- Impressum ---------- */
+.imprint {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  scroll-margin-top: var(--header-height);
+}
+
+.imprintTitle {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.imprintBasis {
+  margin-top: 4px;
+}
+
+.imprintList {
+  display: grid;
+  gap: 12px 32px;
+  margin: 16px 0 0;
+}
+
+.imprintList dt {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.imprintList dd {
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .inner {
     grid-template-columns: 1fr auto;
     align-items: center;
   }
 
+  .imprint,
   .copyright {
     grid-column: 1 / -1;
+  }
+
+  .imprintList {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
