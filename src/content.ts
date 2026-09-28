@@ -43,6 +43,15 @@ export const links = {
   martino: '[MARTINO_URL]',
 };
 
+/* ---------- Sektionen ein-/ausblenden ----------
+   true  = Sektion wird angezeigt
+   false = Sektion ist ausgeblendet (inkl. Menüpunkt), der Code bleibt erhalten.
+   Zum Veröffentlichen einfach auf true stellen. */
+export const visible = {
+  riders: false, // Fahrer: einblenden, sobald Namen, Kurzinfos und Fotos da sind
+  shop: false, // Shop: einblenden, sobald Preis und Foto der Trinkflasche da sind
+};
+
 /* ---------- Menü im Header ----------
    Nur „label“ ändern. „id“ verweist auf die Sektion und muss so bleiben. */
 export const navigation = [

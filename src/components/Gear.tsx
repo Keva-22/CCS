@@ -1,10 +1,14 @@
-import { gear } from '../content';
+import { gear, visible } from '../content';
 import PlaceholderImage from './PlaceholderImage';
 import styles from './Gear.module.css';
 
 export default function Gear() {
   return (
-    <section id="bikes-trikots" className="section" aria-labelledby="bikes-trikots-title">
+    // Grauer Hintergrund, solange „Fahrer“ ausgeblendet ist (sonst zwei weiße Sektionen hintereinander)
+    <section
+      id="bikes-trikots"
+      className={visible.riders ? 'section' : 'section section--alt'}
+      aria-labelledby="bikes-trikots-title">
       <div className="container">
         <h2 id="bikes-trikots-title" className="section-title">
           {gear.title}

@@ -8,6 +8,7 @@ import Shop from './components/Shop';
 import Partner from './components/Partner';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
+import { visible } from './content';
 
 export default function App() {
   return (
@@ -16,10 +17,10 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Riders />
+        {visible.riders && <Riders />}
         <Gear />
         <Races />
-        <Shop />
+        {visible.shop && <Shop />}
         <Partner />
         <Gallery />
       </main>

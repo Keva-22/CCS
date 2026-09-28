@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
-import { navigation, team } from '../content';
+import { navigation, team, visible } from '../content';
 import styles from './Header.module.css';
+
+// Menüpunkte ausgeblendeter Sektionen weglassen
+const hiddenIds = [!visible.riders && 'fahrer', !visible.shop && 'shop'];
+const menuItems = navigation.filter((item) => !hiddenIds.includes(item.id));
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,7 +42,7 @@ export default function Header() {
 
         <nav id="hauptmenue" className={`${styles.nav} ${menuOpen ? styles.open : ''}`} aria-label="Hauptnavigation">
           <ul className={styles.list}>
-            {navigation.map((item) => (
+            {menuItems.map((item) => (
               <li key={item.id}>
                 <a href={`#${item.id}`} className={styles.link} onClick={closeMenu}>
                   {item.label}
