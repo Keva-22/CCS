@@ -1,0 +1,22 @@
+.values {
+  display: grid;
+  gap: 32px;
+}
+
+.value {
+  padding-top: 20px;
+  border-top: 2px solid var(--color-dark);
+}
+
+.valueTitle {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  .values {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}

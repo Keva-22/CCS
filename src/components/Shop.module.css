@@ -1,0 +1,56 @@
+.product {
+  display: grid;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  box-shadow: 0 1px 3px rgba(17, 24, 39, 0.08);
+}
+
+.product + .product {
+  margin-top: 24px;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px 20px 28px;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.howTo {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .product {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .image {
+    height: 100%;
+  }
+
+  .body {
+    justify-content: center;
+    padding: 40px;
+  }
+}

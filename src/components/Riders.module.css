@@ -1,0 +1,52 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  box-shadow: 0 1px 3px rgba(17, 24, 39, 0.08);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.body {
+  padding: 14px 16px 18px;
+  border-top: 4px solid var(--color-accent);
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.info {
+  margin-top: 4px;
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+}
+
+.empty {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}

@@ -1,0 +1,65 @@
+.footer {
+  padding-block: 48px;
+  background: var(--color-dark);
+  color: #ffffff;
+}
+
+.inner {
+  display: grid;
+  gap: 24px;
+}
+
+.motto {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: inline-block;
+  padding-block: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.links a[href]:hover {
+  color: var(--color-accent);
+}
+
+/* Link ohne Ziel (URL noch Platzhalter) */
+.links a:not([href]) {
+  color: rgba(255, 255, 255, 0.45);
+  cursor: not-allowed;
+}
+
+.copyright {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+  }
+}
