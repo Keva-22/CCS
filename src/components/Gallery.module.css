@@ -14,6 +14,17 @@
   object-fit: cover;
 }
 
+/* Mobile: bei ungerader Fotoanzahl ist das erste Foto doppelt breit (keine Lücke) */
+@media (max-width: 767px) {
+  .grid li:first-child:nth-last-child(odd) {
+    grid-column: span 2;
+  }
+
+  .grid li:first-child:nth-last-child(odd) .image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);

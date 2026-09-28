@@ -17,7 +17,6 @@
    OFFENE PLATZHALTER (alles in [eckigen Klammern] muss noch ersetzt werden):
    • [MARTINO_URL]         → Website von Martino Cycling    (siehe: links)
    • [PREIS]               → Preis der Trinkflasche         (siehe: shop)
-   • [BIKE-MARKE / MODELL] → Infos zu den Teambikes         (siehe: gear)
    • [TRIKOT-DETAILS]      → Infos zur Teamkleidung         (siehe: gear)
    • Fahrer                → Namen, Kurzinfos, Fotos        (siehe: riders)
    • Impressum             → Name, Anschrift, E-Mail …      (siehe: imprint)
@@ -59,12 +58,12 @@ export const navigation = [
 /* ---------- 1. Hero ---------- */
 export const hero = {
   logo: {
-    src: 'images/logo.png',
+    src: 'images/logo.jpg',
     alt: 'Logo von CCS – Cycling Collective Salzburg',
   },
   background: {
     src: 'images/hero.jpg',
-    alt: 'Fahrer von CCS auf dem Rennrad',
+    alt: 'Vier Fahrer von CCS im Teamtrikot, von hinten fotografiert, auf einer Landstraße',
   },
 };
 
@@ -123,14 +122,14 @@ export const gear = {
     {
       title: 'Teambikes',
       // TODO: Text prüfen
-      text: 'Unsere Teambikes: [BIKE-MARKE / MODELL]. Hier stellen wir bald vor, womit wir unterwegs sind.',
-      image: { src: 'images/bike-1.jpg', alt: 'Teambike von CCS' },
+      text: 'Unser Teambike: das Martino Veloce Pro One – vom Team-Partner Martino Cycling, im selben Blau-Pink wie unsere Trikots.',
+      image: { src: 'images/bike-1.jpg', alt: 'Rennrad Martino Veloce Pro One in Blau und Pink' },
     },
     {
       title: 'Teamkleidung',
       // TODO: Text prüfen
-      text: 'Unser Teamtrikot: [TRIKOT-DETAILS]. Gemeinsame Farben, ein gemeinsamer Auftritt – auf jeder Ausfahrt.',
-      image: { src: 'images/jersey-1.jpg', alt: 'Teamtrikot von CCS' },
+      text: 'Unser Teamtrikot in Blau, Weiß und Pink mit CCS-Logo: [TRIKOT-DETAILS]. Gemeinsame Farben, ein gemeinsamer Auftritt – auf jeder Ausfahrt.',
+      image: { src: 'images/jersey-1.jpg', alt: 'Drei Fahrer von CCS im blau-weiß-pinken Teamtrikot mit ihren Rennrädern' },
     },
   ],
 };
@@ -174,12 +173,10 @@ export const partner = {
 export const gallery = {
   title: 'Galerie',
   images: [
-    { src: 'images/gallery-1.jpg', alt: 'Galerie-Foto 1' },
-    { src: 'images/gallery-2.jpg', alt: 'Galerie-Foto 2' },
-    { src: 'images/gallery-3.jpg', alt: 'Galerie-Foto 3' },
-    { src: 'images/gallery-4.jpg', alt: 'Galerie-Foto 4' },
-    { src: 'images/gallery-5.jpg', alt: 'Galerie-Foto 5' },
-    { src: 'images/gallery-6.jpg', alt: 'Galerie-Foto 6' },
+    // Weiteres Foto: als gallery-4.jpg usw. in public/images/ legen und hier eine Zeile ergänzen.
+    { src: 'images/gallery-1.jpg', alt: 'Fahrer von CCS mit ihren Rennrädern auf einem Dorfplatz' },
+    { src: 'images/gallery-2.jpg', alt: 'Kaffeepause von CCS: Selfie mit Fahrern im Teamtrikot' },
+    { src: 'images/gallery-3.jpg', alt: 'Vier Fahrer von CCS im Teamtrikot, von hinten fotografiert, auf einer Landstraße' },
   ],
 };
 

@@ -79,3 +79,7 @@ div.logo {
     height: 160px;
   }
 }
+
+img.logo {
+  border-radius: var(--radius);
+}
