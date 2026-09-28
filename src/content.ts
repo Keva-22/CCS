@@ -48,6 +48,7 @@ export const links = {
 export const visible = {
   riders: false, // Fahrer: einblenden, sobald Namen, Kurzinfos und Fotos da sind
   shop: false, // Shop: einblenden, sobald Preis und Foto der Trinkflasche da sind
+  imprint: false, // Impressum im Footer: einblenden, sobald Name, Anschrift und E-Mail da sind
 };
 
 /* ---------- Menü im Header ----------
