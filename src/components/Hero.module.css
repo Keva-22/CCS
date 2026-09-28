@@ -2,8 +2,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: max(520px, calc(100vh - var(--header-height)));
-  min-height: max(520px, calc(100svh - var(--header-height)));
+  /* füllt den Bildschirm unter dem Header (svh = sichtbare Höhe am Handy) */
+  min-height: max(340px, calc(100vh - var(--header-height)));
+  min-height: max(340px, calc(100svh - var(--header-height)));
   overflow: hidden;
   background: var(--color-dark);
   color: #ffffff;
@@ -16,6 +17,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 40%;
 }
 
 /* echtes Foto abdunkeln, damit der Text lesbar bleibt */
@@ -39,20 +41,24 @@ div.bg {
   flex-direction: column;
   align-items: center;
   /* unten mehr Abstand als oben → Text sitzt optisch etwas höher */
-  padding-block: 32px calc(64px + 12vh);
+  padding-block: 24px calc(24px + 10vh);
+  padding-block: 24px calc(24px + 10svh);
   text-align: center;
 }
 
+/* Schriftgröße richtet sich nach Breite UND Höhe (passt auch quer am Handy) */
 .title {
   max-width: 14ch;
-  font-size: clamp(2.75rem, 9vw, 6rem);
+  font-size: clamp(2.25rem, min(11vw, 11vh), 7rem);
+  font-size: clamp(2.25rem, min(11vw, 11svh), 7rem);
   line-height: 0.95;
 }
 
 .motto {
-  margin-top: 20px;
+  margin-top: clamp(12px, 2.5vh, 24px);
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: clamp(1.25rem, min(4vw, 5.5vh), 2.5rem);
+  font-size: clamp(1.25rem, min(4vw, 5.5svh), 2.5rem);
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -61,3 +67,35 @@ div.bg {
   color: var(--color-accent-light);
 }
 
+/* ---------- Breite Bildschirme (Laptop, Monitor, Tablet quer) ----------
+   Das Foto ist hochkant – full-width würde es stark vergrößert und beschnitten.
+   Darum: links Text auf Dunkel, rechts das Foto mit weichem Übergang. */
+@media (min-width: 1024px) and (min-aspect-ratio: 5/4) {
+  .bg {
+    left: 45%;
+    width: 55%;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 30%);
+    mask-image: linear-gradient(to right, transparent, #000 30%);
+  }
+
+  img.bg {
+    filter: brightness(0.85);
+  }
+
+  .content {
+    width: 55%;
+    max-width: none;
+    margin: 0;
+    padding-inline: clamp(32px, 5vw, 120px);
+  }
+
+  .title {
+    font-size: clamp(3rem, min(5.5vw, 12vh), 7rem);
+    font-size: clamp(3rem, min(5.5vw, 12svh), 7rem);
+  }
+
+  .motto {
+    font-size: clamp(1.5rem, min(2.4vw, 5.5vh), 2.75rem);
+    font-size: clamp(1.5rem, min(2.4vw, 5.5svh), 2.75rem);
+  }
+}
