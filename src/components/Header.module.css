@@ -136,13 +136,29 @@ div.logo {
   text-decoration: none;
 }
 
-.link:hover {
-  color: var(--color-accent);
+.link:hover,
+.link[aria-current] {
+  color: var(--color-accent-light);
+}
+
+/* Abgedunkelte Fläche unter dem offenen Menü */
+.backdrop {
+  position: fixed;
+  inset: var(--header-height) 0 0 0;
+  background: rgba(6, 9, 14, 0.6);
+}
+
+/* Seite dahinter nicht scrollen, solange das Klappmenü offen ist */
+@media (max-width: 959px) {
+  :global(html):has(.nav.open) {
+    overflow: hidden;
+  }
 }
 
 /* ---------- Navigation: Desktop ---------- */
 @media (min-width: 960px) {
-  .burger {
+  .burger,
+  .backdrop {
     display: none;
   }
 
@@ -174,16 +190,18 @@ div.logo {
     right: 0;
     bottom: 0;
     height: 2px;
-    background: var(--color-accent);
+    background: linear-gradient(90deg, var(--color-blue-light), var(--color-accent-light));
     transform: scaleX(0);
     transition: transform 0.2s ease;
   }
 
-  .link:hover {
+  .link:hover,
+  .link[aria-current] {
     color: #ffffff;
   }
 
-  .link:hover::after {
+  .link:hover::after,
+  .link[aria-current]::after {
     transform: scaleX(1);
   }
 }

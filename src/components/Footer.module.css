@@ -37,7 +37,7 @@
 }
 
 .links a[href]:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-light);
 }
 
 /* Link ohne Ziel (URL noch Platzhalter) */

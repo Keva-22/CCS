@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 export default function Hero() {
   return (
     <section id="start" className={styles.hero} aria-labelledby="hero-title">
-      <PlaceholderImage src={hero.background.src} alt={hero.background.alt} className={styles.bg} />
+      <PlaceholderImage src={hero.background.src} alt={hero.background.alt} className={styles.bg} priority />
 
       <div className={`container ${styles.content}`}>
         <h1 id="hero-title" className={styles.title}>

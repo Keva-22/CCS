@@ -7,6 +7,17 @@
   list-style: none;
 }
 
+/* Vorschaubild ist ein Button → öffnet die Großansicht */
+.thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  cursor: zoom-in;
+}
+
 .image {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -30,4 +41,51 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+}
+
+/* ---------- Großansicht ---------- */
+.lightbox {
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgba(6, 9, 14, 0.92);
+}
+
+.large {
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  border-radius: var(--radius);
+}
+
+/* Platzhalter, falls die Bilddatei fehlt */
+div.large {
+  width: min(80vw, 480px);
+  aspect-ratio: 4 / 3;
+}
+
+.close {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.3);
 }

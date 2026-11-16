@@ -1,9 +1,11 @@
-/* ---------- Farben & Schriften (hier zentral anpassen) ---------- */
+/* ---------- Farben & Schriften (hier zentral anpassen) ----------
+   Teamfarben aus Logo und Trikot: Pink und Blau auf fast schwarzem Dunkelblau. */
 :root {
-  --color-dark: #111827;
-  --color-accent: #d62828;
-  --color-accent-dark: #b01f1f;
-  --color-accent-light: #ff5c5c; /* Akzent auf dunklem Hintergrund */
+  --color-dark: #06090e; /* Hintergrundfarbe des Logos */
+  --color-accent: #d41872; /* Team-Pink, etwas dunkler als im Logo, damit weiße Schrift darauf lesbar bleibt */
+  --color-accent-dark: #ad135d; /* Pink beim Darüberfahren */
+  --color-accent-light: #f7499e; /* Pink auf dunklem Hintergrund */
+  --color-blue-light: #51bbe5; /* Hellblau aus dem Logo */
   --color-bg: #ffffff;
   --color-bg-alt: #f3f4f6;
   --color-muted: #4b5563;
@@ -81,6 +83,28 @@ a {
   outline-offset: 3px;
 }
 
+/* Seite dahinter nicht scrollen, solange die Foto-Großansicht offen ist */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/* „Zum Inhalt springen“: nur sichtbar, wenn man mit der Tab-Taste hinkommt */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--gutter);
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--color-bg);
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ---------- Layout-Bausteine ---------- */
 .container {
   width: 100%;
@@ -112,10 +136,11 @@ a {
 .section-title::before {
   content: '';
   display: block;
-  width: 48px;
+  width: 56px;
   height: 5px;
   margin-bottom: 14px;
-  background: var(--color-accent);
+  /* Farbverlauf Hellblau → Pink wie im Logo */
+  background: linear-gradient(90deg, var(--color-blue-light), var(--color-accent-light));
 }
 
 .lead {

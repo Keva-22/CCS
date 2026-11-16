@@ -13,8 +13,11 @@ import { visible } from './content';
 export default function App() {
   return (
     <>
+      <a className="skip-link" href="#inhalt">
+        Zum Inhalt springen
+      </a>
       <Header />
-      <main>
+      <main id="inhalt">
         <Hero />
         <About />
         {visible.riders && <Riders />}

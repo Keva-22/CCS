@@ -16,7 +16,6 @@
 
    OFFENE PLATZHALTER (alles in [eckigen Klammern] muss noch ersetzt werden):
    • [PREIS]               → Preis der Trinkflasche         (siehe: shop)
-   • [TRIKOT-DETAILS]      → Infos zur Teamkleidung         (siehe: gear)
    • Fahrer                → Namen, Kurzinfos, Fotos        (siehe: riders)
    • Impressum             → Name, Anschrift, E-Mail …      (siehe: imprint)
    • Entwurfstexte        → markiert mit  // TODO: Text prüfen
@@ -41,6 +40,17 @@ export const team = {
   name: 'CCS – Cycling Collective Salzburg',
   shortName: 'CCS',
   motto: 'Cycling. Community. Friendship.',
+};
+
+/* ---------- Adresse & Beschreibung der Website ----------
+   Erscheint bei Google und als Vorschau, wenn jemand den Link teilt (WhatsApp, Instagram …).
+   Das Vorschaubild ist public/og-image.jpg (1200 × 630 Pixel).
+   „url“ anpassen, falls die Seite später eine eigene Adresse bekommt (mit / am Ende). */
+export const site = {
+  url: 'https://keva-22.github.io/CCS/',
+  // TODO: Text prüfen
+  description: 'CCS – Cycling Collective Salzburg: Hobby-Radsportteam aus Salzburg. Cycling. Community. Friendship.',
+  previewImageAlt: 'Zwei Fahrer von CCS im Teamtrikot auf einer Landstraße',
 };
 
 /* ---------- Links ---------- */
@@ -146,8 +156,8 @@ export const gear = {
     {
       title: 'Teamkleidung',
       // TODO: Text prüfen
-      text: 'Unser Teamtrikot in Blau, Weiß und Pink mit CCS-Logo: [TRIKOT-DETAILS]. Gemeinsame Farben, ein gemeinsamer Auftritt – auf jeder Ausfahrt.',
-      image: { src: 'images/jersey-1.jpg', alt: 'Drei Fahrer von CCS im blau-weiß-pinken Teamtrikot mit ihren Rennrädern' },
+      text: 'Unser Teamtrikot in Blau, Weiß und Pink – vorne mit dem CCS-Wappen, hinten mit großem CCS-Schriftzug. Gemeinsame Farben, ein gemeinsamer Auftritt – auf jeder Ausfahrt.',
+      image: { src: 'images/jersey-1.jpg', alt: 'Zwei Fahrer von CCS im blau-weiß-pinken Teamtrikot mit ihren Rennrädern' },
     },
   ],
 };
@@ -194,7 +204,7 @@ export const gallery = {
     // Weiteres Foto: als gallery-4.jpg usw. in public/images/ legen und hier eine Zeile ergänzen.
     { src: 'images/gallery-1.jpg', alt: 'Fahrer von CCS mit ihren Rennrädern auf einem Dorfplatz' },
     { src: 'images/gallery-2.jpg', alt: 'Kaffeepause von CCS: Selfie mit Fahrern im Teamtrikot' },
-    { src: 'images/gallery-3.jpg', alt: 'Vier Fahrer von CCS im Teamtrikot, von hinten fotografiert, auf einer Landstraße' },
+    { src: 'images/gallery-3.jpg', alt: 'Zwei Fahrer von CCS im Teamtrikot nebeneinander auf einer Landstraße, von hinten fotografiert' },
   ],
 };
 

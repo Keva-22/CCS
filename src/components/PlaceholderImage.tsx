@@ -5,11 +5,12 @@ type Props = {
   src: string; // Pfad ab public/, z. B. 'images/hero.jpg'
   alt: string;
   className?: string;
+  priority?: boolean; // sofort laden (für Bilder, die ganz oben sichtbar sind)
 };
 
 // Zeigt das Bild aus public/. Fehlt die Datei, erscheint stattdessen ein
 // grauer Platzhalter mit Beschreibung und erwartetem Dateinamen.
-export default function PlaceholderImage({ src, alt, className = '' }: Props) {
+export default function PlaceholderImage({ src, alt, className = '', priority = false }: Props) {
   const [missing, setMissing] = useState(!src);
 
   if (missing) {
@@ -28,7 +29,7 @@ export default function PlaceholderImage({ src, alt, className = '' }: Props) {
       className={className}
       src={import.meta.env.BASE_URL + src}
       alt={alt}
-      loading="lazy"
+      loading={priority ? 'eager' : 'lazy'}
       onError={() => setMissing(true)}
     />
   );
